@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback Form</title>
+</head>
+<body>
+
+Phone:
+<input type="text" onblur="validatePhone(this)">
+<br><br>
+
+Select Event:
+<select onchange="showFee(this.value)">
+    <option value="100">Music Event</option>
+    <option value="200">Workshop</option>
+</select>
+
+<p id="fee"></p>
+
+<button onclick="confirmSubmit()">
+    Submit
+</button>
+
+<br><br>
+
+<img src="event.jpg"
+     width="150"
+     ondblclick="enlarge(this)">
+
+<br><br>
+
+<textarea onkeyup="countChars(this)"></textarea>
+
+<p id="count">Characters: 0</p>
+
+<script>
+function validatePhone(input) {
+    if(input.value.length != 10) {
+        alert("Enter valid phone number");
+    }
+}
+
+function showFee(fee) {
+    document.getElementById("fee").innerHTML =
+        "Fee: ₹" + fee;
+}
+
+function confirmSubmit() {
+    alert("Feedback Submitted");
+}
+
+function enlarge(img) {
+    img.width = 300;
+}
+
+function countChars(text) {
+    document.getElementById("count").innerHTML =
+        "Characters: " + text.value.length;
+}
+</script>
+
+</body>
+</html>

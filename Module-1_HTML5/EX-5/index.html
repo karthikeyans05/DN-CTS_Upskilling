@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+
+    <style>
+        form {
+            width: 350px;
+            padding: 20px;
+            border: 1px solid gray;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<form onsubmit="showMessage(); return false;">
+
+    <input type="text"
+           placeholder="Enter Name"
+           required
+           autofocus>
+
+    <input type="email"
+           placeholder="Enter Email"
+           required>
+
+    <input type="date" required>
+
+    <select required>
+        <option>Music Event</option>
+        <option>Sports Event</option>
+    </select>
+
+    <textarea placeholder="Message"></textarea>
+
+    <button type="submit">Register</button>
+
+    <output id="result"></output>
+
+</form>
+
+<script>
+function showMessage() {
+    document.getElementById("result").value =
+        "Registration Successful!";
+}
+</script>
+
+</body>
+</html>
