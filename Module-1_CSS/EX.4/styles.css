@@ -1,0 +1,10 @@
+body{
+    background-color: rgba(200,200,200,0.5);
+    background-image: url("C:\Users\karth\Desktop\projects\CTS\Module-1_CSS\EX.4\133977312477963054 - Copy.jpg");
+}
+
+.header{
+    color: #ffffff;
+    background: linear-gradient(to right, blue, green);
+    padding: 10px;
+}
